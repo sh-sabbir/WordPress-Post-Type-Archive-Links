@@ -169,7 +169,7 @@ class Post_Type_Archive_Links {
 			'object'
 		);
 		foreach ( $has_archive_cps as $ptid => $pt ) {
-			$to_show = $pt->show_in_nav_menus && $pt->publicly_queryable;
+			$to_show = $pt->publicly_queryable;
 			if ( apply_filters( "show_{$ptid}_archive_in_nav_menus", $to_show, $pt ) ) {
 				$cpts[] = $pt;
 			}
